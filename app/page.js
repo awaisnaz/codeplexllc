@@ -5,10 +5,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: null, message: null });
+  const [isSending, setIsSending] = useState(false);
 
   const handleContactClick = (e) => {
     e.preventDefault();
     setIsModalOpen(true);
+    setSubmitStatus({ type: null, message: null });
   };
 
   return (
@@ -175,7 +178,7 @@ export default function Home() {
         </motion.div>
       </main>
 
-      {/* Add Contact Modal */}
+      {/* Contact Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
           <motion.div 
@@ -185,64 +188,120 @@ export default function Home() {
           >
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
             >
-              ✕
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              Contact Us
-            </h2>
-            <form onSubmit={async (e) => {
-              e.preventDefault();
-              try {
-                const response = await fetch('/api/contact', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    subject: e.target.subject.value,
-                    message: e.target.message.value,
-                    to: 'awais.nazir@codeplexllc.com'
-                  }),
-                });
-
-                if (response.ok) {
-                  alert('Message sent successfully!');
-                  setIsModalOpen(false);
-                } else {
-                  throw new Error('Failed to send message');
-                }
-              } catch (error) {
-                alert('Error sending message. Please try again.');
-                console.error('Error:', error);
-              }
-            }}>
-              <div className="mb-4">
-                <label className="block text-gray-300 mb-2">Subject</label>
-                <input 
-                  type="text"
-                  name="subject"
-                  className="w-full bg-gray-700 rounded-lg px-4 py-2 text-white"
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label className="block text-gray-300 mb-2">Message</label>
-                <textarea 
-                  name="message"
-                  rows="4"
-                  className="w-full bg-gray-700 rounded-lg px-4 py-2 text-white"
-                  required
-                ></textarea>
-              </div>
-              <button 
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+            
+            {submitStatus.type ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-8"
               >
-                Send Email
-              </button>
-            </form>
+                <div className={`mb-4 text-5xl ${submitStatus.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+                  {submitStatus.type === 'success' ? '✓' : '✕'}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  {submitStatus.type === 'success' ? 'Message Sent!' : 'Error'}
+                </h3>
+                <p className="text-gray-300 mb-6">{submitStatus.message}</p>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+                >
+                  Close
+                </button>
+              </motion.div>
+            ) : (
+              <>
+                <h2 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                  Contact Us
+                </h2>
+                <form onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSending(true);
+                  try {
+                    const response = await fetch('/api/contact', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        subject: e.target.subject.value,
+                        message: e.target.message.value,
+                        to: 'awais.nazir@codeplexllc.com'
+                      }),
+                    });
+
+                    if (response.ok) {
+                      setSubmitStatus({
+                        type: 'success',
+                        message: 'Your message has been sent successfully. We\'ll get back to you soon!'
+                      });
+                    } else {
+                      throw new Error('Failed to send message');
+                    }
+                  } catch (error) {
+                    setSubmitStatus({
+                      type: 'error',
+                      message: 'Failed to send message. Please try again or contact us directly.'
+                    });
+                    console.error('Error:', error);
+                  } finally {
+                    setIsSending(false);
+                  }
+                }}>
+                  <div className="mb-4">
+                    <label className="block text-gray-300 mb-2 font-medium">Subject</label>
+                    <input 
+                      type="text"
+                      name="subject"
+                      className="w-full bg-gray-700/50 rounded-lg px-4 py-2 text-white border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                      required
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <label className="block text-gray-300 mb-2 font-medium">Message</label>
+                    <textarea 
+                      name="message"
+                      rows="4"
+                      className="w-full bg-gray-700/50 rounded-lg px-4 py-2 text-white border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                      required
+                    ></textarea>
+                  </div>
+                  <button 
+                    type="submit"
+                    disabled={isSending}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSending ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <svg 
+                          className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </form>
+              </>
+            )}
           </motion.div>
         </div>
       )}
