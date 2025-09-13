@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('frontend');
+  const [activeTab, setActiveTab] = useState('all');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 sm:py-16 bg-white scroll-mt-20 sm:scroll-mt-32">
+      <section id="services" className="py-12 sm:py-16 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Software Development Services</h2>
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* AI Expertise Section */}
-      <section id="ai-expertise" className="py-12 sm:py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 scroll-mt-20 sm:scroll-mt-32">
+      <section id="ai-expertise" className="py-12 sm:py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -370,7 +370,7 @@ export default function Home() {
       </section>
 
       {/* Customer Journey Section */}
-      <section id="case-studies" className="py-12 sm:py-16 bg-gray-50 scroll-mt-20 sm:scroll-mt-32">
+      <section id="case-studies" className="py-12 sm:py-16 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* Engagement Models */}
-      <section id="about" className="py-12 sm:py-16 bg-white scroll-mt-20 sm:scroll-mt-32">
+      <section id="about" className="py-12 sm:py-16 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Engagement Models</h2>
@@ -436,7 +436,7 @@ export default function Home() {
       </section>
 
       {/* Industries Section */}
-      <section id="industries" className="py-12 sm:py-16 bg-gray-50 scroll-mt-20 sm:scroll-mt-32">
+      <section id="industries" className="py-12 sm:py-16 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -470,7 +470,7 @@ export default function Home() {
       </section>
 
       {/* Technology Stack */}
-      <section id="hire-developers" className="py-12 sm:py-16 bg-white scroll-mt-20 sm:scroll-mt-32">
+      <section id="hire-developers" className="py-12 sm:py-16 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -504,62 +504,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Calendly Booking Section */}
-      <section id="book-consultation" className="py-16 bg-gradient-to-br from-blue-600 to-purple-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Schedule a free consultation with our experts to discuss your project requirements, 
-              timeline, and how we can help bring your vision to life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={() => window.open('https://calendly.com/codeplex/30min', '_blank')}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-lg shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Schedule Free Consultation
-              </button>
-              <div className="text-blue-100 text-sm">
-                <span className="flex items-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  30-minute session • No commitment required
-                </span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Calendly Embed Widget */}
-          <div className="bg-white rounded-lg shadow-2xl p-8 max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Book Your Consultation</h3>
-              <p className="text-gray-600">Choose a time that works best for you</p>
-            </div>
-            <div className="calendly-inline-widget" data-url="https://calendly.com/codeplex/30min" style={{minWidth: '320px', height: '630px'}}></div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center mb-4">
-                <Image 
-                  src="/codeplex-logo.svg" 
-                  alt="CodePlex Logo" 
-                  width={40} 
-                  height={40} 
-                  className="mr-3 filter brightness-0 invert"
-                />
+              <div className="mb-4">
                 <div className="text-2xl font-bold text-blue-400">CodePlex</div>
               </div>
                <p className="text-gray-400">
