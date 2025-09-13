@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="puppet-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAE1A"/>
+      <stop offset="100%" stop-color="#FF8800"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="112" fill="url(#puppet-gradient)"/>
+  <g fill="white">
+    <circle cx="104" cy="104" r="12"/>
+    <circle cx="152" cy="104" r="12"/>
+    <path d="M128 80 Q140 70 152 80 Q140 90 128 80 Q116 90 104 80 Q116 70 128 80"/>
+    <ellipse cx="128" cy="140" rx="24" ry="16"/>
+    <path d="M80 160 Q128 180 176 160 Q128 200 80 160"/>
+  </g>
+  <g fill="#FF6600">
+    <path d="M64 120 Q80 100 96 120 L96 140 Q80 160 64 140 Z"/>
+    <path d="M192 120 Q176 100 160 120 L160 140 Q176 160 192 140 Z"/>
+  </g>
+</svg>

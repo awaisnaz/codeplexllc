@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="mistral-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FF5722"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#mistral-gradient)"/>
+  <g fill="white">
+    <path d="M64 100 Q128 80 192 100" stroke="white" stroke-width="4" fill="none"/>
+    <path d="M64 128 Q128 108 192 128" stroke="white" stroke-width="4" fill="none"/>
+    <path d="M64 156 Q128 136 192 156" stroke="white" stroke-width="4" fill="none"/>
+    <circle cx="64" cy="100" r="4"/>
+    <circle cx="64" cy="128" r="4"/>
+    <circle cx="64" cy="156" r="4"/>
+    <circle cx="192" cy="100" r="4"/>
+    <circle cx="192" cy="128" r="4"/>
+    <circle cx="192" cy="156" r="4"/>
+  </g>
+  <text x="128" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Mistral</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="langflow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#langflow-gradient)"/>
+  <g fill="white">
+    <rect x="64" y="80" width="32" height="24" rx="4"/>
+    <rect x="160" y="80" width="32" height="24" rx="4"/>
+    <rect x="112" y="128" width="32" height="24" rx="4"/>
+    <rect x="64" y="176" width="32" height="24" rx="4"/>
+    <rect x="160" y="176" width="32" height="24" rx="4"/>
+    <path d="M96 92 L112 128" stroke="white" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M160 92 L144 128" stroke="white" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M128 152 L96 176" stroke="white" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M128 152 L160 176" stroke="white" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="white"/>
+    </marker>
+  </defs>
+</svg>

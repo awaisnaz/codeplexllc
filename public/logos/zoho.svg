@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="zoho-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#F7931E"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="32" fill="url(#zoho-gradient)"/>
+  <path d="M80 80 L176 80 L176 96 L112 96 L176 160 L176 176 L80 176 L80 160 L144 160 L80 96 Z" fill="white"/>
+  <circle cx="192" cy="64" r="16" fill="#1E40AF"/>
+</svg>

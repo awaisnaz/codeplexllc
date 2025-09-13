@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="plotly-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F4F75"/>
+      <stop offset="100%" stop-color="#119DFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#plotly-gradient)"/>
+  <g fill="white">
+    <circle cx="80" cy="180" r="6"/>
+    <circle cx="120" cy="140" r="6"/>
+    <circle cx="160" cy="100" r="6"/>
+    <circle cx="200" cy="80" r="6"/>
+    <path d="M80 180 L120 140 L160 100 L200 80" stroke="white" stroke-width="3" fill="none"/>
+    <rect x="64" y="200" width="128" height="2"/>
+    <rect x="64" y="200" width="2" height="-120"/>
+  </g>
+  <g fill="#119DFF" opacity="0.7">
+    <rect x="76" y="160" width="8" height="20"/>
+    <rect x="116" y="120" width="8" height="60"/>
+    <rect x="156" y="100" width="8" height="80"/>
+    <rect x="196" y="80" width="8" height="100"/>
+  </g>
+</svg>

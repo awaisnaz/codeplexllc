@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="llama-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#llama-gradient)"/>
+  <g fill="white">
+    <ellipse cx="128" cy="90" rx="40" ry="30"/>
+    <ellipse cx="128" cy="140" rx="30" ry="40"/>
+    <ellipse cx="128" cy="180" rx="20" ry="15"/>
+    <circle cx="115" cy="85" r="4" fill="#8B5CF6"/>
+    <circle cx="141" cy="85" r="4" fill="#8B5CF6"/>
+    <ellipse cx="128" cy="95" rx="8" ry="4" fill="#8B5CF6"/>
+    <path d="M100 70 Q110 60 120 70" stroke="white" stroke-width="3" fill="none"/>
+    <path d="M136 70 Q146 60 156 70" stroke="white" stroke-width="3" fill="none"/>
+  </g>
+  <text x="128" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Llama</text>
+</svg>

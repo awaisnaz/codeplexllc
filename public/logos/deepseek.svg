@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="deepseek-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="50%" stop-color="#16213E"/>
+      <stop offset="100%" stop-color="#0F3460"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#deepseek-gradient)"/>
+  <g fill="#00D4FF">
+    <circle cx="128" cy="80" r="8"/>
+    <circle cx="96" cy="120" r="6"/>
+    <circle cx="160" cy="120" r="6"/>
+    <circle cx="80" cy="160" r="4"/>
+    <circle cx="128" cy="160" r="4"/>
+    <circle cx="176" cy="160" r="4"/>
+    <path d="M128 80 L96 120 M128 80 L160 120 M96 120 L80 160 M96 120 L128 160 M160 120 L128 160 M160 120 L176 160" stroke="#00D4FF" stroke-width="2" fill="none"/>
+  </g>
+  <text x="128" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">DeepSeek</text>
+</svg>

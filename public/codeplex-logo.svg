@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#e8e5e0"/>
+  
+  <!-- Logo container -->
+  <g transform="translate(312, 200)">
+    <!-- Rounded rectangle background -->
+    <rect x="0" y="0" width="400" height="400" rx="80" ry="80" fill="#1e3a4a"/>
+    
+    <!-- Code brackets -->
+    <g transform="translate(200, 200)" fill="#f0f0f0">
+      <!-- Left bracket -->
+      <path d="M-80,-80 L-120,-40 L-120,40 L-80,80" stroke="#f0f0f0" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Forward slash -->
+      <path d="M-20,-100 L20,100" stroke="#f0f0f0" stroke-width="20" fill="none" stroke-linecap="round"/>
+      
+      <!-- Right bracket -->
+      <path d="M80,-80 L120,-40 L120,40 L80,80" stroke="#f0f0f0" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <text x="512" y="720" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#1e3a4a">codeplex</text>
+</svg>

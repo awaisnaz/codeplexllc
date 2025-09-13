@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="chef-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F09820"/>
+      <stop offset="100%" stop-color="#ED8B00"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#chef-gradient)"/>
+  <g fill="white">
+    <ellipse cx="128" cy="80" rx="48" ry="24"/>
+    <rect x="96" y="80" width="64" height="80" rx="8"/>
+    <circle cx="112" cy="120" r="4"/>
+    <circle cx="128" cy="110" r="4"/>
+    <circle cx="144" cy="120" r="4"/>
+    <circle cx="112" cy="140" r="4"/>
+    <circle cx="144" cy="140" r="4"/>
+    <rect x="104" y="160" width="48" height="32" rx="4"/>
+  </g>
+  <path d="M128 60 Q140 50 152 60 Q140 70 128 60 Q116 70 104 60 Q116 50 128 60" fill="white" opacity="0.8"/>
+</svg>

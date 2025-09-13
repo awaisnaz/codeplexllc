@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="ibm-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1261FE"/>
+      <stop offset="100%" stop-color="#0F62FE"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="url(#ibm-gradient)"/>
+  <g fill="white">
+    <rect x="64" y="80" width="128" height="8"/>
+    <rect x="64" y="96" width="128" height="8"/>
+    <rect x="64" y="112" width="128" height="8"/>
+    <rect x="80" y="128" width="96" height="8"/>
+    <rect x="80" y="144" width="96" height="8"/>
+    <rect x="64" y="160" width="128" height="8"/>
+    <rect x="64" y="176" width="128" height="8"/>
+  </g>
+  <path d="M128 200 Q140 190 152 200 Q140 210 128 200 Q116 210 104 200 Q116 190 128 200" fill="white" opacity="0.8"/>
+</svg>
