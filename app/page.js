@@ -547,8 +547,8 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-300">Phone</p>
-                  <a href="tel:+19294121996" className="hover:text-white transition-colors">
-                    +1 (929) 412-1996
+                  <a href="tel:+19294080219" className="hover:text-white transition-colors">
+                    +1 (929) 408-0219
                   </a>
                 </div>
 
