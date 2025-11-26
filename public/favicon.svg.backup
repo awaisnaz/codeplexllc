@@ -1,0 +1,53 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- transparent background -->
+  
+  <!-- curly braces -->
+  <path d="M11 6
+           C9.3 6, 8.5 7.3, 8.5 8.6
+           L8.5 10
+           C8.5 11.5, 7.4 12.6, 6 12.9
+           L6 19.1
+           C7.4 19.4, 8.5 20.5, 8.5 22
+           L8.5 23.4
+           C8.5 24.7, 9.3 26, 11 26
+           L12.2 26
+           C13.2 26, 14 25.2, 14 24.2
+           C14 23.3, 13.3 22.7, 12.5 22.7
+           L12 22.7
+           L12 21.8
+           C12 19.9, 10.8 18.7, 9.1 18.1
+           L9.1 13.9
+           C10.8 13.3, 12 12.1, 12 10.2
+           L12 9.3
+           L12.5 9.3
+           C13.3 9.3, 14 8.7, 14 7.8
+           C14 6.8, 13.2 6, 12.2 6
+           Z" fill="none" stroke="#1e6ba8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M21 6
+           C22.7 6, 23.5 7.3, 23.5 8.6
+           L23.5 10
+           C23.5 11.5, 24.6 12.6, 26 12.9
+           L26 19.1
+           C24.6 19.4, 23.5 20.5, 23.5 22
+           L23.5 23.4
+           C23.5 24.7, 22.7 26, 21 26
+           L19.8 26
+           C18.8 26, 18 25.2, 18 24.2
+           C18 23.3, 18.7 22.7, 19.5 22.7
+           L20 22.7
+           L20 21.8
+           C20 19.9, 21.2 18.7, 22.9 18.1
+           L22.9 13.9
+           C21.2 13.3, 20 12.1, 20 10.2
+           L20 9.3
+           L19.5 9.3
+           C18.7 9.3, 18 8.7, 18 7.8
+           C18 6.8, 18.8 6, 19.8 6
+           Z" fill="none" stroke="#1e6ba8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- center </> -->
+  <path d="M14.4 11.5 L11.4 16 L14.4 20.5" fill="none" stroke="#1e6ba8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.6 11.5 L20.6 16 L17.6 20.5" fill="none" stroke="#1e6ba8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 11.2 L16 20.8" fill="none" stroke="#1e6ba8" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

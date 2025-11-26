@@ -87,7 +87,13 @@ export default function Home() {
           <div className="flex justify-between items-center h-20">
             {/* Logo Section */}
             <div className="flex items-center">
-              <div className="text-3xl font-bold text-blue-600 tracking-tight">CodePlex</div>
+              <a href="/" className="block" aria-label="CodePlex Home">
+                <img
+                  src="/codeplex-logo.png"
+                  alt="CodePlex"
+                  className="h-8 md:h-10 lg:h-12 w-auto object-contain"
+                />
+              </a>
             </div>
             
             {/* Mobile menu button */}

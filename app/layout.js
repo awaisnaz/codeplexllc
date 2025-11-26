@@ -15,9 +15,9 @@ export const metadata = {
   title: 'CodePlex - Software Development & Consulting Company',
   description: 'CodePlex helps businesses overcome every challenge on their journey. From launching startups to expanding enterprises, we provide expert software development and consulting services.',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
